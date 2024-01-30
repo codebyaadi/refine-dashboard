@@ -23,7 +23,7 @@ import { currencyNumber } from "@/utilities";
 
 import { COMPANIES_LIST_QUERY } from "@/graphql/queries";
 
-export const CompanyList = () => {
+export const CompanyList = ({ children }: React.PropsWithChildren) => {
   const go = useGo();
 
   const { tableProps, filters } = useTable<
@@ -154,6 +154,7 @@ export const CompanyList = () => {
           />
         </Table>
       </List>
+      {children}
     </div>
   );
 };

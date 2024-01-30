@@ -24,9 +24,10 @@ import routerBindings, {
   UnsavedChangesNotifier,
   DocumentTitleHandler,
 } from "@refinedev/react-router-v6";
-import { Home, ForgotPassword, Login, Register } from "./pages";
+import { Home, ForgotPassword, Login, Register, CompanyList, Create } from "./pages";
 import { dataProvider, liveProvider, authProvider } from "./providers";
 import Layout from "./components/layout";
+import { resources } from "./config/resources";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
               notificationProvider={useNotificationProvider}
               routerProvider={routerBindings}
               authProvider={authProvider}
+              resources={resources}
               options={{
                 syncWithLocation: true,
                 warnWhenUnsavedChanges: true,
@@ -64,6 +66,10 @@ function App() {
                   </Authenticated>}
                 >
                   <Route index element={<Home />} />
+                  <Route path="/companies">
+                    <Route index element={<CompanyList />} />
+                    <Route path="/new" element={<Create />} />
+                  </Route>
                 </Route>
               </Routes>
               <RefineKbar />

@@ -10,7 +10,7 @@ import { HttpError, useGo } from "@refinedev/core";
 import { GetFields, GetFieldsFromList, GetVariables } from "@refinedev/nestjs-query";
 import { Form, Input, Modal, Select } from "antd";
 import { USERS_SELECT_QUERY } from "@/graphql/queries";
-import { SelectOptionWithAvatar } from "@/components/select-option-with-avatar";
+import { SelectOptionWithAvatar } from "@/components/avatar/select-option-with-avatar";
 
 export const Create = () => {
   const go = useGo();

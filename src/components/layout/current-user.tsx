@@ -1,5 +1,5 @@
 import { Button, Popover } from "antd";
-import CustomAvatar from "../custom-avatar";
+import CustomAvatar from "../avatar/custom-avatar";
 import { useGetIdentity } from "@refinedev/core";
 
 import type { User } from "@/graphql/schema.types";

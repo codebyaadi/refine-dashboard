@@ -15,7 +15,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import { Input, Space, Table } from "antd";
 
 import { PaginationTotal } from "@/components/pagination-total";
-import CustomAvatar from "@/components/custom-avatar";
+import CustomAvatar from "@/components/avatar/custom-avatar";
 import { Text } from "@/components/text";
 import { Company } from "@/graphql/schema.types";
 import { CompaniesListQuery } from "@/graphql/types";

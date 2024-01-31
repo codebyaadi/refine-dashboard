@@ -28,6 +28,7 @@ import { Home, ForgotPassword, Login, Register, CompanyList, Create, EditPage} f
 import { dataProvider, liveProvider, authProvider } from "./providers";
 import Layout from "./components/layout";
 import { resources } from "./config/resources";
+import { TasksListPage } from "./pages/tasks/list";
 
 function App() {
   return (
@@ -70,6 +71,9 @@ function App() {
                     <Route index element={<CompanyList />} />
                     <Route path="new" element={<Create />} />
                     <Route path="edit/:id" element={<EditPage />} />
+                  </Route>
+                  <Route path="/tasks">
+                    <Route index element={<TasksListPage />} />
                   </Route>
                 </Route>
               </Routes>

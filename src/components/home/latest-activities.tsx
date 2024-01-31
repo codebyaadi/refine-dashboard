@@ -5,7 +5,7 @@ import { UnorderedListOutlined } from "@ant-design/icons";
 import { Card, List, Skeleton as AntdSkeleton, Space } from "antd";
 import dayjs from "dayjs";
 
-import CustomAvatar from "../custom-avatar";
+import CustomAvatar from "../avatar/custom-avatar";
 import { Text } from "../text";
 import {
   DashboardLatestActivitiesAuditsQuery,

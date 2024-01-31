@@ -1,5 +1,5 @@
-import CustomAvatar from "@/components/custom-avatar";
-import { SelectOptionWithAvatar } from "@/components/select-option-with-avatar";
+import CustomAvatar from "@/components/avatar/custom-avatar";
+import { SelectOptionWithAvatar } from "@/components/avatar/select-option-with-avatar";
 import {
   businessTypeOptions,
   companySizeOptions,

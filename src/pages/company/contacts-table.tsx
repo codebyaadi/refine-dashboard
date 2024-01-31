@@ -18,7 +18,7 @@ import { COMPANY_CONTACTS_TABLE_QUERY } from "@/graphql/queries";
 
 import { CompanyContactsTableQuery } from "@/graphql/types";
 import { Text } from "@/components/text";
-import CustomAvatar from "@/components/custom-avatar";
+import CustomAvatar from "@/components/avatar/custom-avatar";
 import { ContactStatusTag } from "@/components/tags/contact-status-tag";
 
 export const CompanyContactsTable = () => {

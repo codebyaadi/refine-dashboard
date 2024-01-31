@@ -1,3 +1,4 @@
+// Copied the folder from zip
 export * from "./currency-number";
 export * from "./date";
 export * from "./get-name-initials";

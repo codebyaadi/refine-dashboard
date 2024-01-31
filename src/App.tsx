@@ -24,7 +24,7 @@ import routerBindings, {
   UnsavedChangesNotifier,
   DocumentTitleHandler,
 } from "@refinedev/react-router-v6";
-import { Home, ForgotPassword, Login, Register, CompanyList, Create } from "./pages";
+import { Home, ForgotPassword, Login, Register, CompanyList, Create, EditPage} from "./pages";
 import { dataProvider, liveProvider, authProvider } from "./providers";
 import Layout from "./components/layout";
 import { resources } from "./config/resources";
@@ -69,6 +69,7 @@ function App() {
                   <Route path="/companies">
                     <Route index element={<CompanyList />} />
                     <Route path="new" element={<Create />} />
+                    <Route path="edit/:id" element={<EditPage />} />
                   </Route>
                 </Route>
               </Routes>

@@ -24,11 +24,21 @@ import routerBindings, {
   UnsavedChangesNotifier,
   DocumentTitleHandler,
 } from "@refinedev/react-router-v6";
-import { Home, ForgotPassword, Login, Register, CompanyList, Create, EditPage} from "./pages";
+import {
+  Home,
+  ForgotPassword,
+  Login,
+  Register,
+  CompanyList,
+  Create,
+  EditPage,
+} from "./pages";
 import { dataProvider, liveProvider, authProvider } from "./providers";
 import Layout from "./components/layout";
 import { resources } from "./config/resources";
 import { TasksListPage } from "./pages/tasks/list";
+import { TasksCreatePage } from "./pages/tasks/create";
+import TasksEditPage from "./pages/tasks/edit";
 
 function App() {
   return (
@@ -57,14 +67,16 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route
-                  element={<Authenticated
-                    key="authenticated-layout"
-                    fallback={<CatchAllNavigate to="/login" />}
-                  >
-                    <Layout>
-                      <Outlet />
-                    </Layout>
-                  </Authenticated>}
+                  element={
+                    <Authenticated
+                      key="authenticated-layout"
+                      fallback={<CatchAllNavigate to="/login" />}
+                    >
+                      <Layout>
+                        <Outlet />
+                      </Layout>
+                    </Authenticated>
+                  }
                 >
                   <Route index element={<Home />} />
                   <Route path="/companies">
@@ -72,8 +84,16 @@ function App() {
                     <Route path="new" element={<Create />} />
                     <Route path="edit/:id" element={<EditPage />} />
                   </Route>
-                  <Route path="/tasks">
-                    <Route index element={<TasksListPage />} />
+                  <Route
+                    path="/tasks"
+                    element={
+                      <TasksListPage>
+                        <Outlet />
+                      </TasksListPage>
+                    }
+                  >
+                    <Route path="new" element={<TasksCreatePage />} />
+                    <Route path="edit/:id" element={<TasksEditPage />} />
                   </Route>
                 </Route>
               </Routes>
